@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CA2BBAA1E6F8A6E00F7FCDB /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */; };
+		2CA2BBAD1E6F8B6600F7FCDB /* billViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */; };
+		2CA2BBB31E6F8FEA00F7FCDB /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */; };
+		2CADE6211E6EFFFD00E5FA6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6201E6EFFFD00E5FA6D /* main.m */; };
+		2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */; };
+		2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6261E6EFFFD00E5FA6D /* ViewController.m */; };
+		2CADE62A1E6EFFFD00E5FA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE6281E6EFFFD00E5FA6D /* Main.storyboard */; };
+		2CADE62C1E6EFFFD00E5FA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE62B1E6EFFFD00E5FA6D /* Assets.xcassets */; };
+		2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */; };
+		2CADE63A1E6EFFFD00E5FA6D /* Uepp_0307Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */; };
+		2CADE6451E6EFFFD00E5FA6D /* Uepp_0307UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */; };
+		5672D8F3164F6A9C91C2FA5B /* libPods-Uepp-0307.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E93238B45CE1C744612C4D /* libPods-Uepp-0307.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CADE6361E6EFFFD00E5FA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CADE6141E6EFFFD00E5FA6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CADE61B1E6EFFFD00E5FA6D;
+			remoteInfo = "Uepp-0307";
+		};
+		2CADE6411E6EFFFD00E5FA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CADE6141E6EFFFD00E5FA6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CADE61B1E6EFFFD00E5FA6D;
+			remoteInfo = "Uepp-0307";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EA7B53352C4FEB58E2303D0 /* Pods-Uepp-0307.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uepp-0307.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307.release.xcconfig"; sourceTree = "<group>"; };
+		2CA2BBA81E6F8A6E00F7FCDB /* QRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeViewController.h; sourceTree = "<group>"; };
+		2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeViewController.m; sourceTree = "<group>"; };
+		2CA2BBAB1E6F8B6600F7FCDB /* billViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billViewController.h; sourceTree = "<group>"; };
+		2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billViewController.m; sourceTree = "<group>"; };
+		2CA2BBB11E6F8FEA00F7FCDB /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = informationViewController.h; path = ../informationViewController.h; sourceTree = "<group>"; };
+		2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = informationViewController.m; path = ../informationViewController.m; sourceTree = "<group>"; };
+		2CADE61C1E6EFFFD00E5FA6D /* Uepp-0307.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uepp-0307.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CADE6201E6EFFFD00E5FA6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CADE6251E6EFFFD00E5FA6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CADE6261E6EFFFD00E5FA6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CADE6291E6EFFFD00E5FA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CADE62B1E6EFFFD00E5FA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CADE62E1E6EFFFD00E5FA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CADE6301E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CADE6351E6EFFFD00E5FA6D /* Uepp-0307Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uepp-0307Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Uepp_0307Tests.m; sourceTree = "<group>"; };
+		2CADE63B1E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uepp-0307UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Uepp_0307UITests.m; sourceTree = "<group>"; };
+		2CADE6461E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C815D4857479496B7C792D6F /* Pods-Uepp-0307.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uepp-0307.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307.debug.xcconfig"; sourceTree = "<group>"; };
+		E7E93238B45CE1C744612C4D /* libPods-Uepp-0307.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Uepp-0307.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CADE6191E6EFFFD00E5FA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5672D8F3164F6A9C91C2FA5B /* libPods-Uepp-0307.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE6321E6EFFFD00E5FA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE63D1E6EFFFD00E5FA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21AF633A42FFEA80A1EFBA91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C815D4857479496B7C792D6F /* Pods-Uepp-0307.debug.xcconfig */,
+				0EA7B53352C4FEB58E2303D0 /* Pods-Uepp-0307.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2CADE6131E6EFFFD00E5FA6D = {
+			isa = PBXGroup;
+			children = (
+				2CADE61E1E6EFFFD00E5FA6D /* Uepp-0307 */,
+				2CADE6381E6EFFFD00E5FA6D /* Uepp-0307Tests */,
+				2CADE6431E6EFFFD00E5FA6D /* Uepp-0307UITests */,
+				2CADE61D1E6EFFFD00E5FA6D /* Products */,
+				21AF633A42FFEA80A1EFBA91 /* Pods */,
+				CE9E7BF9E5E0B5F36985D2E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2CADE61D1E6EFFFD00E5FA6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CADE61C1E6EFFFD00E5FA6D /* Uepp-0307.app */,
+				2CADE6351E6EFFFD00E5FA6D /* Uepp-0307Tests.xctest */,
+				2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CADE61E1E6EFFFD00E5FA6D /* Uepp-0307 */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2BBB11E6F8FEA00F7FCDB /* informationViewController.h */,
+				2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */,
+				2CA2BBA81E6F8A6E00F7FCDB /* QRcodeViewController.h */,
+				2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */,
+				2CA2BBAB1E6F8B6600F7FCDB /* billViewController.h */,
+				2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */,
+				2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */,
+				2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */,
+				2CADE6251E6EFFFD00E5FA6D /* ViewController.h */,
+				2CADE6261E6EFFFD00E5FA6D /* ViewController.m */,
+				2CADE6281E6EFFFD00E5FA6D /* Main.storyboard */,
+				2CADE62B1E6EFFFD00E5FA6D /* Assets.xcassets */,
+				2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */,
+				2CADE6301E6EFFFD00E5FA6D /* Info.plist */,
+				2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */,
+			);
+			path = "Uepp-0307";
+			sourceTree = "<group>";
+		};
+		2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CADE6201E6EFFFD00E5FA6D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CADE6381E6EFFFD00E5FA6D /* Uepp-0307Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */,
+				2CADE63B1E6EFFFD00E5FA6D /* Info.plist */,
+			);
+			path = "Uepp-0307Tests";
+			sourceTree = "<group>";
+		};
+		2CADE6431E6EFFFD00E5FA6D /* Uepp-0307UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */,
+				2CADE6461E6EFFFD00E5FA6D /* Info.plist */,
+			);
+			path = "Uepp-0307UITests";
+			sourceTree = "<group>";
+		};
+		CE9E7BF9E5E0B5F36985D2E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7E93238B45CE1C744612C4D /* libPods-Uepp-0307.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CADE61B1E6EFFFD00E5FA6D /* Uepp-0307 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CADE6491E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307" */;
+			buildPhases = (
+				E8B3E696D5D7445DD2E015A9 /* [CP] Check Pods Manifest.lock */,
+				2CADE6181E6EFFFD00E5FA6D /* Sources */,
+				2CADE6191E6EFFFD00E5FA6D /* Frameworks */,
+				2CADE61A1E6EFFFD00E5FA6D /* Resources */,
+				19296FC981C559FEB1B94BE4 /* [CP] Embed Pods Frameworks */,
+				0260BD6D132E40BE85B7220F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Uepp-0307";
+			productName = "Uepp-0307";
+			productReference = 2CADE61C1E6EFFFD00E5FA6D /* Uepp-0307.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CADE6341E6EFFFD00E5FA6D /* Uepp-0307Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CADE64C1E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307Tests" */;
+			buildPhases = (
+				2CADE6311E6EFFFD00E5FA6D /* Sources */,
+				2CADE6321E6EFFFD00E5FA6D /* Frameworks */,
+				2CADE6331E6EFFFD00E5FA6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CADE6371E6EFFFD00E5FA6D /* PBXTargetDependency */,
+			);
+			name = "Uepp-0307Tests";
+			productName = "Uepp-0307Tests";
+			productReference = 2CADE6351E6EFFFD00E5FA6D /* Uepp-0307Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CADE63F1E6EFFFD00E5FA6D /* Uepp-0307UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CADE64F1E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307UITests" */;
+			buildPhases = (
+				2CADE63C1E6EFFFD00E5FA6D /* Sources */,
+				2CADE63D1E6EFFFD00E5FA6D /* Frameworks */,
+				2CADE63E1E6EFFFD00E5FA6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CADE6421E6EFFFD00E5FA6D /* PBXTargetDependency */,
+			);
+			name = "Uepp-0307UITests";
+			productName = "Uepp-0307UITests";
+			productReference = 2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CADE6141E6EFFFD00E5FA6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = yan;
+				TargetAttributes = {
+					2CADE61B1E6EFFFD00E5FA6D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4DMM75NZAC;
+						ProvisioningStyle = Automatic;
+					};
+					2CADE6341E6EFFFD00E5FA6D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4DMM75NZAC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CADE61B1E6EFFFD00E5FA6D;
+					};
+					2CADE63F1E6EFFFD00E5FA6D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4DMM75NZAC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CADE61B1E6EFFFD00E5FA6D;
+					};
+				};
+			};
+			buildConfigurationList = 2CADE6171E6EFFFD00E5FA6D /* Build configuration list for PBXProject "Uepp-0307" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CADE6131E6EFFFD00E5FA6D;
+			productRefGroup = 2CADE61D1E6EFFFD00E5FA6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CADE61B1E6EFFFD00E5FA6D /* Uepp-0307 */,
+				2CADE6341E6EFFFD00E5FA6D /* Uepp-0307Tests */,
+				2CADE63F1E6EFFFD00E5FA6D /* Uepp-0307UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CADE61A1E6EFFFD00E5FA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */,
+				2CADE62C1E6EFFFD00E5FA6D /* Assets.xcassets in Resources */,
+				2CADE62A1E6EFFFD00E5FA6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE6331E6EFFFD00E5FA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE63E1E6EFFFD00E5FA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0260BD6D132E40BE85B7220F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19296FC981C559FEB1B94BE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B3E696D5D7445DD2E015A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CADE6181E6EFFFD00E5FA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA2BBAD1E6F8B6600F7FCDB /* billViewController.m in Sources */,
+				2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */,
+				2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */,
+				2CA2BBAA1E6F8A6E00F7FCDB /* QRcodeViewController.m in Sources */,
+				2CADE6211E6EFFFD00E5FA6D /* main.m in Sources */,
+				2CA2BBB31E6F8FEA00F7FCDB /* informationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE6311E6EFFFD00E5FA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CADE63A1E6EFFFD00E5FA6D /* Uepp_0307Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CADE63C1E6EFFFD00E5FA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CADE6451E6EFFFD00E5FA6D /* Uepp_0307UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CADE6371E6EFFFD00E5FA6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CADE61B1E6EFFFD00E5FA6D /* Uepp-0307 */;
+			targetProxy = 2CADE6361E6EFFFD00E5FA6D /* PBXContainerItemProxy */;
+		};
+		2CADE6421E6EFFFD00E5FA6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CADE61B1E6EFFFD00E5FA6D /* Uepp-0307 */;
+			targetProxy = 2CADE6411E6EFFFD00E5FA6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CADE6281E6EFFFD00E5FA6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CADE6291E6EFFFD00E5FA6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CADE62E1E6EFFFD00E5FA6D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CADE6471E6EFFFD00E5FA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CADE6481E6EFFFD00E5FA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CADE64A1E6EFFFD00E5FA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C815D4857479496B7C792D6F /* Pods-Uepp-0307.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.-209-UIKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CADE64B1E6EFFFD00E5FA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA7B53352C4FEB58E2303D0 /* Pods-Uepp-0307.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.-209-UIKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CADE64D1E6EFFFD00E5FA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.Uepp-0307Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uepp-0307.app/Uepp-0307";
+			};
+			name = Debug;
+		};
+		2CADE64E1E6EFFFD00E5FA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.Uepp-0307Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uepp-0307.app/Uepp-0307";
+			};
+			name = Release;
+		};
+		2CADE6501E6EFFFD00E5FA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.Uepp-0307UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Uepp-0307";
+			};
+			name = Debug;
+		};
+		2CADE6511E6EFFFD00E5FA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4DMM75NZAC;
+				INFOPLIST_FILE = "Uepp-0307UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dhcc.Uepp-0307UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Uepp-0307";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CADE6171E6EFFFD00E5FA6D /* Build configuration list for PBXProject "Uepp-0307" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CADE6471E6EFFFD00E5FA6D /* Debug */,
+				2CADE6481E6EFFFD00E5FA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CADE6491E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CADE64A1E6EFFFD00E5FA6D /* Debug */,
+				2CADE64B1E6EFFFD00E5FA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CADE64C1E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CADE64D1E6EFFFD00E5FA6D /* Debug */,
+				2CADE64E1E6EFFFD00E5FA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CADE64F1E6EFFFD00E5FA6D /* Build configuration list for PBXNativeTarget "Uepp-0307UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CADE6501E6EFFFD00E5FA6D /* Debug */,
+				2CADE6511E6EFFFD00E5FA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CADE6141E6EFFFD00E5FA6D /* Project object */;
+}
