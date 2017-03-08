@@ -47,7 +47,7 @@
     [self.qrCodeButton makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.left).offset(20);
         make.bottom.equalTo(self.view.bottom).offset(-73);
-        make.height.equalTo(40);
+        make.height.equalTo(50);
         make.right.equalTo(self.qrReceivables.left).offset(-20);
     }];
     
