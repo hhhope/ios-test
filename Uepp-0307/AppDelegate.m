@@ -26,13 +26,16 @@
     
     //控制器添加到tablebar
     QRcodeViewController *qrVc =[[QRcodeViewController alloc]init];
-    [tabBarVc addChildViewController:qrVc];
     billViewController *billVc = [[billViewController alloc]init];
-    [tabBarVc addChildViewController:billVc];
     informationViewController *infromationVc = [[informationViewController alloc]init];
-    [tabBarVc addChildViewController:infromationVc];
-
-    
+    //添加控制导航器
+    UINavigationController *qrNavVc = [[UINavigationController alloc] initWithRootViewController:qrVc];
+    UINavigationController *billNavVc = [[UINavigationController alloc] initWithRootViewController:billVc];
+    UINavigationController *informationNavVc = [[UINavigationController alloc] initWithRootViewController:infromationVc];
+    //设置tabbar
+    [tabBarVc addChildViewController:qrNavVc];
+    [tabBarVc addChildViewController:billNavVc];
+    [tabBarVc addChildViewController:informationNavVc];
     //设置tabBar title
     qrVc.tabBarItem.title = @"收款";
     qrVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_collection_choose_27x27_"];
@@ -40,8 +43,9 @@
     billVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_collection_choose_27x27_"];
     infromationVc.tabBarItem.title = @"我的";
     infromationVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_me_choose_27x27_"];
-
+    //设置UINavigationController title
     
+
     [self.window makeKeyAndVisible];
     
     return YES;

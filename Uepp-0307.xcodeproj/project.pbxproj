@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CA2BBAA1E6F8A6E00F7FCDB /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */; };
+		2C03D6E21E72A833006AC36C /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03D6E11E72A833006AC36C /* QRcodeViewController.m */; };
 		2CA2BBAD1E6F8B6600F7FCDB /* billViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */; };
 		2CA2BBB31E6F8FEA00F7FCDB /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */; };
+		2CA2BBB91E6FEA5800F7FCDB /* selctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BBB81E6FEA5800F7FCDB /* selctViewController.m */; };
 		2CADE6211E6EFFFD00E5FA6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6201E6EFFFD00E5FA6D /* main.m */; };
 		2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */; };
 		2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6261E6EFFFD00E5FA6D /* ViewController.m */; };
@@ -18,6 +19,9 @@
 		2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */; };
 		2CADE63A1E6EFFFD00E5FA6D /* Uepp_0307Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */; };
 		2CADE6451E6EFFFD00E5FA6D /* Uepp_0307UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */; };
+		2CECAA7D1E76200200D7C105 /* ZBarSDK in Resources */ = {isa = PBXBuildFile; fileRef = 2CECAA7C1E76200200D7C105 /* ZBarSDK */; };
+		2CECAA801E7620AC00D7C105 /* ScanImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CECAA7F1E7620AC00D7C105 /* ScanImageViewController.m */; };
+		2CECAA841E7661C500D7C105 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CECAA831E7661C500D7C105 /* iconfont.ttf */; };
 		5672D8F3164F6A9C91C2FA5B /* libPods-Uepp-0307.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E93238B45CE1C744612C4D /* libPods-Uepp-0307.a */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +44,14 @@
 
 /* Begin PBXFileReference section */
 		0EA7B53352C4FEB58E2303D0 /* Pods-Uepp-0307.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uepp-0307.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307.release.xcconfig"; sourceTree = "<group>"; };
+		2C03D6E11E72A833006AC36C /* QRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeViewController.m; sourceTree = "<group>"; };
 		2CA2BBA81E6F8A6E00F7FCDB /* QRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeViewController.h; sourceTree = "<group>"; };
-		2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeViewController.m; sourceTree = "<group>"; };
 		2CA2BBAB1E6F8B6600F7FCDB /* billViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billViewController.h; sourceTree = "<group>"; };
 		2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billViewController.m; sourceTree = "<group>"; };
 		2CA2BBB11E6F8FEA00F7FCDB /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = informationViewController.h; path = ../informationViewController.h; sourceTree = "<group>"; };
 		2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = informationViewController.m; path = ../informationViewController.m; sourceTree = "<group>"; };
+		2CA2BBB71E6FEA5800F7FCDB /* selctViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selctViewController.h; sourceTree = "<group>"; };
+		2CA2BBB81E6FEA5800F7FCDB /* selctViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selctViewController.m; sourceTree = "<group>"; };
 		2CADE61C1E6EFFFD00E5FA6D /* Uepp-0307.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uepp-0307.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CADE6201E6EFFFD00E5FA6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 		2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uepp-0307UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Uepp_0307UITests.m; sourceTree = "<group>"; };
 		2CADE6461E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CECAA7C1E76200200D7C105 /* ZBarSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ZBarSDK; sourceTree = "<group>"; };
+		2CECAA7E1E7620AC00D7C105 /* ScanImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanImageViewController.h; sourceTree = "<group>"; };
+		2CECAA7F1E7620AC00D7C105 /* ScanImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanImageViewController.m; sourceTree = "<group>"; };
+		2CECAA831E7661C500D7C105 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		C815D4857479496B7C792D6F /* Pods-Uepp-0307.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uepp-0307.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uepp-0307/Pods-Uepp-0307.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E93238B45CE1C744612C4D /* libPods-Uepp-0307.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Uepp-0307.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +114,7 @@
 		2CADE6131E6EFFFD00E5FA6D = {
 			isa = PBXGroup;
 			children = (
+				2CECAA7C1E76200200D7C105 /* ZBarSDK */,
 				2CADE61E1E6EFFFD00E5FA6D /* Uepp-0307 */,
 				2CADE6381E6EFFFD00E5FA6D /* Uepp-0307Tests */,
 				2CADE6431E6EFFFD00E5FA6D /* Uepp-0307UITests */,
@@ -126,12 +137,16 @@
 		2CADE61E1E6EFFFD00E5FA6D /* Uepp-0307 */ = {
 			isa = PBXGroup;
 			children = (
-				2CA2BBB11E6F8FEA00F7FCDB /* informationViewController.h */,
-				2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */,
-				2CA2BBA81E6F8A6E00F7FCDB /* QRcodeViewController.h */,
-				2CA2BBA91E6F8A6E00F7FCDB /* QRcodeViewController.m */,
+				2CECAA7E1E7620AC00D7C105 /* ScanImageViewController.h */,
+				2CECAA7F1E7620AC00D7C105 /* ScanImageViewController.m */,
 				2CA2BBAB1E6F8B6600F7FCDB /* billViewController.h */,
 				2CA2BBAC1E6F8B6600F7FCDB /* billViewController.m */,
+				2CA2BBB71E6FEA5800F7FCDB /* selctViewController.h */,
+				2CA2BBB81E6FEA5800F7FCDB /* selctViewController.m */,
+				2C03D6E11E72A833006AC36C /* QRcodeViewController.m */,
+				2CA2BBA81E6F8A6E00F7FCDB /* QRcodeViewController.h */,
+				2CA2BBB11E6F8FEA00F7FCDB /* informationViewController.h */,
+				2CA2BBB21E6F8FEA00F7FCDB /* informationViewController.m */,
 				2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */,
 				2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */,
 				2CADE6251E6EFFFD00E5FA6D /* ViewController.h */,
@@ -139,7 +154,6 @@
 				2CADE6281E6EFFFD00E5FA6D /* Main.storyboard */,
 				2CADE62B1E6EFFFD00E5FA6D /* Assets.xcassets */,
 				2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */,
-				2CADE6301E6EFFFD00E5FA6D /* Info.plist */,
 				2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */,
 			);
 			path = "Uepp-0307";
@@ -148,6 +162,8 @@
 		2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CECAA831E7661C500D7C105 /* iconfont.ttf */,
+				2CADE6301E6EFFFD00E5FA6D /* Info.plist */,
 				2CADE6201E6EFFFD00E5FA6D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -291,8 +307,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CECAA7D1E76200200D7C105 /* ZBarSDK in Resources */,
 				2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */,
 				2CADE62C1E6EFFFD00E5FA6D /* Assets.xcassets in Resources */,
+				2CECAA841E7661C500D7C105 /* iconfont.ttf in Resources */,
 				2CADE62A1E6EFFFD00E5FA6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,9 +387,11 @@
 				2CA2BBAD1E6F8B6600F7FCDB /* billViewController.m in Sources */,
 				2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */,
 				2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */,
-				2CA2BBAA1E6F8A6E00F7FCDB /* QRcodeViewController.m in Sources */,
+				2CECAA801E7620AC00D7C105 /* ScanImageViewController.m in Sources */,
+				2C03D6E21E72A833006AC36C /* QRcodeViewController.m in Sources */,
 				2CADE6211E6EFFFD00E5FA6D /* main.m in Sources */,
 				2CA2BBB31E6F8FEA00F7FCDB /* informationViewController.m in Sources */,
+				2CA2BBB91E6FEA5800F7FCDB /* selctViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
