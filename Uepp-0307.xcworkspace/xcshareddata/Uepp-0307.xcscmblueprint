@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "54ECB660BB1F0F60AA972B22C37D42D3C8225B6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "54ECB660BB1F0F60AA972B22C37D42D3C8225B6B" : 9223372036854775807,
+    "4928513EE50CFC7C3ACF43ECCDD6D23E20789F3E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B044F14-E22B-47A4-BEAD-F57F8C885F6C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "54ECB660BB1F0F60AA972B22C37D42D3C8225B6B" : "backup\/",
+    "4928513EE50CFC7C3ACF43ECCDD6D23E20789F3E" : "..\/LBXScan"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Uepp-0307",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Uepp-0307.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MxABC\/LBXScan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4928513EE50CFC7C3ACF43ECCDD6D23E20789F3E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hhhope\/ios-test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "54ECB660BB1F0F60AA972B22C37D42D3C8225B6B"
+    }
+  ]
+}
