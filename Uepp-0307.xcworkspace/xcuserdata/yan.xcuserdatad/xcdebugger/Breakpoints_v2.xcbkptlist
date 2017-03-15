@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uepp-0307/QRcodeViewController.m"
-            timestampString = "511058101.845575"
+            timestampString = "511083280.950252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "@interface QRcodeViewController()"
             landmarkType = "2">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uepp-0307/QRcodeViewController.m"
-            timestampString = "511065617.23988"
+            timestampString = "511083280.950252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-click:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uepp-0307/QRcodeViewController.m"
-            timestampString = "511065617.23988"
+            timestampString = "511083280.950252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-click:"
             landmarkType = "7">
          </BreakpointContent>

@@ -1,6 +1,7 @@
  
 target 'Uepp-0307'
 pod 'Masonry'
+pod 'MJRefresh'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'LBXScan','~> 1.1.1'
 pod 'LBXAlertAction'

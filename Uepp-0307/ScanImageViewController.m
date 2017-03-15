@@ -9,9 +9,7 @@
 #import "ScanImageViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
-#define MAS_SHORTHAND
-//define this constant if you want to enable auto-boxing for default syntax
-#define MAS_SHORTHAND_GLOBALS
+
 #define SCANVIEW_EdgeTop 70.0
 #define SCANVIEW_EdgeLeft 50.0
 #define TINTCOLOR_ALPHA 0.2 //浅色透明度
@@ -60,7 +58,7 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
     titleLabel.textColor =[UIColor whiteColor];
     self.navigationItem.titleView =titleLabel;
     
-    //设置背景色
+    //设置透明
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];

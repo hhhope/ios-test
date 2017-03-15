@@ -11,14 +11,8 @@
 #import "LBXScanWrapper.h"
 #import "LBXScanViewStyle.h"
 #import "ScanImageViewController.h"
-//取色
-#define UIColorFromRGB1(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-//define this constant if you want to use Masonry without the 'mas_' prefix
-#define MAS_SHORTHAND
-//define this constant if you want to enable auto-boxing for default syntax
-#define MAS_SHORTHAND_GLOBALS
-#import "Masonry.h"
+#import "CreatQRcodeviewController.h"
+
 @interface QRcodeViewController ()
 
 //显示屏
@@ -125,7 +119,7 @@
     }];
     self.qrButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.amount addSubview:self.qrButton];
-    self.qrButton.titleLabel.font = [UIFont fontWithName:@"iconfont" size:23];
+    self.qrButton.titleLabel.font = [UIFont fontWithName:@"iconfont" size:25];
     [self.qrButton setTitle:@"\U0000E642" forState:UIControlStateNormal];
     self.qrButton.tintColor = [UIColor whiteColor];
     [self.qrButton sizeToFit];
@@ -135,13 +129,13 @@
     }];
     self.massage = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.amount addSubview:self.massage];
-    self.massage.titleLabel.font = [UIFont fontWithName:@"iconfont" size:23];
+    self.massage.titleLabel.font = [UIFont fontWithName:@"iconfont" size:25];
     [self.massage setTitle:@"\U0000E632" forState:UIControlStateNormal];
     self.massage.tintColor = [UIColor whiteColor];
     [self.massage sizeToFit];
     [self.massage makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.qrButton);
-        make.right.equalTo(self.qrButton.left).offset(-5);
+        make.right.equalTo(self.qrButton.left).offset(-20);
     }];
 }
 //计算器
@@ -357,9 +351,10 @@
         UIAlertAction *okCtrl = [UIAlertAction actionWithTitle:okButtonTitle
                                                          style:UIAlertActionStyleCancel
                                                        handler:nil];
-        [self presentViewController:alertController animated:YES completion:nil];
+        [ self presentViewController:alertController animated:YES completion:nil ] ;
         //step 3 action
         [alertController addAction:okCtrl];
+        return;
     }else if(self.ouput_amt != nil){
         scanImage.amt = self.ouput_amt;
     }else{
@@ -371,6 +366,9 @@
     NSLog(@"scanImageButton");
 }
 -(void)qrCollection{
-
+    CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
+    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
+    [self presentViewController:nv animated:YES completion:nil];
+    NSLog(@"scanImageButton");
 }
 @end
