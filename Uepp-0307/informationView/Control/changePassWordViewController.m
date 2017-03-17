@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 50)];
+    titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text =@"关于我们";
+    titleLabel.textColor =[UIColor whiteColor];
+    self.navigationItem.titleView =titleLabel;
     // Do any additional setup after loading the view.
 }
 
