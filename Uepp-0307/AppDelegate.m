@@ -40,7 +40,7 @@
     qrVc.tabBarItem.title = @"收款";
     qrVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_collection_choose_27x27_"];
     billVc.tabBarItem.title = @"账单";
-    billVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_collection_choose_27x27_"];
+    billVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_bill_choose_27x27_"];
     infromationVc.tabBarItem.title = @"我的";
     infromationVc.tabBarItem.image =[UIImage imageNamed:@"icon_tab_me_choose_27x27_"];
     //设置UINavigationController title
