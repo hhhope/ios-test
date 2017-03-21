@@ -65,6 +65,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(indexPath.section == 0)
     {
         //设置无法点击

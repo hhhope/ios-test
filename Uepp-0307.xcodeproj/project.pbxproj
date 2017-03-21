@@ -10,6 +10,7 @@
 		2C258DFA1E77CB3100ED70E6 /* billViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258DF51E77CB3100ED70E6 /* billViewController.m */; };
 		2C258DFB1E77CB3100ED70E6 /* selctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258DF71E77CB3100ED70E6 /* selctViewController.m */; };
 		2C258E9E1E77CC1A00ED70E6 /* MovieInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258E9D1E77CC1A00ED70E6 /* MovieInformation.m */; };
+		2C473F771E7F6695002D8339 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C473F761E7F6695002D8339 /* loginViewController.m */; };
 		2C88B0FF1E78C9A100CC890F /* CreatQRcodeviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FA1E78C9A100CC890F /* CreatQRcodeviewController.m */; };
 		2C88B1001E78C9A100CC890F /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FC1E78C9A100CC890F /* QRcodeViewController.m */; };
 		2C88B1051E7910FC00CC890F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C88B1041E7910FC00CC890F /* iconfont.ttf */; };
@@ -58,6 +59,8 @@
 		2C258DF71E77CB3100ED70E6 /* selctViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selctViewController.m; sourceTree = "<group>"; };
 		2C258E9C1E77CC1A00ED70E6 /* MovieInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInformation.h; sourceTree = "<group>"; };
 		2C258E9D1E77CC1A00ED70E6 /* MovieInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInformation.m; sourceTree = "<group>"; };
+		2C473F751E7F6695002D8339 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		2C473F761E7F6695002D8339 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		2C88B0F91E78C9A100CC890F /* CreatQRcodeviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatQRcodeviewController.h; sourceTree = "<group>"; };
 		2C88B0FA1E78C9A100CC890F /* CreatQRcodeviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatQRcodeviewController.m; sourceTree = "<group>"; };
 		2C88B0FB1E78C9A100CC890F /* QRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeViewController.h; sourceTree = "<group>"; };
@@ -167,6 +170,39 @@
 			sourceTree = "<group>";
 		};
 		2C258DF91E77CB3100ED70E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C473F711E7F6674002D8339 /* loginView */ = {
+			isa = PBXGroup;
+			children = (
+				2C473F721E7F6674002D8339 /* Control */,
+				2C473F731E7F6674002D8339 /* Model */,
+				2C473F741E7F6674002D8339 /* View */,
+			);
+			path = loginView;
+			sourceTree = "<group>";
+		};
+		2C473F721E7F6674002D8339 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				2C473F751E7F6695002D8339 /* loginViewController.h */,
+				2C473F761E7F6695002D8339 /* loginViewController.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		2C473F731E7F6674002D8339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C473F741E7F6674002D8339 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -283,8 +319,9 @@
 				2C258DF21E77CB3100ED70E6 /* billView */,
 				2C88B0F71E78C9A100CC890F /* QRCodeView */,
 				2C88B10D1E79267200CC890F /* informationView */,
-				2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */,
+				2C473F711E7F6674002D8339 /* loginView */,
 				2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */,
+				2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */,
 				2CADE6251E6EFFFD00E5FA6D /* ViewController.h */,
 				2CADE6261E6EFFFD00E5FA6D /* ViewController.m */,
 				2CF210A41E7A24D5003F8093 /* creatQRcode.h */,
@@ -528,6 +565,7 @@
 				2CF210A61E7A24D5003F8093 /* creatQRcode.m in Sources */,
 				2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */,
 				2C88B1001E78C9A100CC890F /* QRcodeViewController.m in Sources */,
+				2C473F771E7F6695002D8339 /* loginViewController.m in Sources */,
 				2C88B1131E79267200CC890F /* informationViewController.m in Sources */,
 				2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */,
 				2C88B1151E7926B700CC890F /* ScanImageViewController.m in Sources */,

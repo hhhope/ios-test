@@ -10,6 +10,7 @@
 #import "QRcodeViewController.h"
 #import "billViewController.h"
 #import "informationViewController.h"
+//#import "loginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,7 +24,7 @@
     //创建tablebar
     UITabBarController *tabBarVc = [[UITabBarController alloc]init];
     self.window.rootViewController = tabBarVc;
-    
+//    loginViewController *loginVc = [[loginViewController alloc]init];
     //控制器添加到tablebar
     QRcodeViewController *qrVc =[[QRcodeViewController alloc]init];
     billViewController *billVc = [[billViewController alloc]init];

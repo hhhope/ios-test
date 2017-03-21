@@ -12,7 +12,7 @@
 #import "LBXScanViewStyle.h"
 #import "ScanImageViewController.h"
 #import "CreatQRcodeviewController.h"
-
+#import "loginViewController.h"
 @interface QRcodeViewController ()
 
 //显示屏
@@ -32,12 +32,23 @@
 
 //计算器
 @property UIImageView *calculatorView;
+
+//蒙板
+@property UIButton *maskButton;
 @end
 
 @implementation QRcodeViewController
+//通知的固定格式
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)viewDidLoad {
+    [self loginView];
     [super viewDidLoad];
+    //通知的固定格式
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clear) name:@"clear" object:nil];
+   
     self.view.backgroundColor = [UIColor whiteColor];
     self.qrCodeButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.qrReceivables = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -78,6 +89,14 @@
     [self.qrReceivables addTarget:self action:@selector(qrCollection) forControlEvents:UIControlEventTouchUpInside];
 
 }
+//清空
+- (void)clear{
+    self.amountlabel.text =@"0.00";
+    self.balance=nil;
+    self.ouput_amt=nil;//金额
+    self.input_amt=nil;
+}
+
 - (void)screenCalculatorView{
     
 }
@@ -265,6 +284,8 @@
         str1= self.balance;
         if (str1.length>=1) {
             str1 = [str1 substringToIndex:(str1.length-1)];
+        }if(str1.length==0){
+            str1  = @"0.00";
         }
         
         self.balance =str1;
@@ -334,7 +355,7 @@
 - (void)qr_Pay{
     ScanImageViewController *scanImage =[[ScanImageViewController alloc]init];
   
-    if(self.balance == nil&&self.ouput_amt == nil)
+    if([self.amountlabel.text  isEqual: @"0.00"])
     {
         //STEP 1
         NSString *title = @"提示";
@@ -352,19 +373,17 @@
         //step 3 action
         [alertController addAction:okCtrl];
         return;
-    }else if(self.ouput_amt != nil){
-        scanImage.amt = self.ouput_amt;
-    }else{
-        NSLog(@"bbbb");
-        scanImage.amt = self.balance;
+    }else if(self.amountlabel.text != nil){
+        scanImage.amt = self.amountlabel.text;
     }
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:scanImage];
+    //模态跳转
     [self presentViewController:nv animated:YES completion:nil];
     NSLog(@"scanImageButton");
 }
 -(void)qrCollection{
-    CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
-    if(self.balance == nil&&self.ouput_amt == nil)
+   
+    if([self.amountlabel.text  isEqual: @"0.00"])
     {
         //STEP 1
         NSString *title = @"提示";
@@ -382,15 +401,130 @@
         //step 3 action
         [alertController addAction:okCtrl];
         return;
-    }else if(self.ouput_amt != nil){
-        creatQRvc.amt = self.ouput_amt;
-    }else{
-        NSLog(@"bbbb");
-        creatQRvc.amt = self.balance;
     }
+    self.maskButton = [[UIButton alloc]initWithFrame:self.view.bounds];
+
+    self.maskButton.backgroundColor = [[UIColor grayColor]colorWithAlphaComponent:0.5];
+    //蒙板注意事项
+    [self.tabBarController.view addSubview: self.maskButton];
+    [self.maskButton addTarget:self action:@selector(dismaskView :) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *alertButton  = [[UIButton alloc]init];
+    alertButton.layer.cornerRadius = 8;
+    alertButton.backgroundColor = [UIColor whiteColor];
+    [self.maskButton addSubview:alertButton];
+    [alertButton makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(0);
+        make.width.equalTo(250);
+        make.height.equalTo(140);
+    }];
+    UILabel *alertTitle = [[UILabel alloc]init];
+    alertTitle.text = @"选择支付方式";
+    [alertButton addSubview: alertTitle];
+    [alertTitle makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(10);
+        make.centerX.equalTo(0);
+    }];
+    UIView *lineView = [[UIView alloc]init];
+    lineView.frame = CGRectMake(0, 35, 250, 0.5);
+    lineView.backgroundColor = [UIColor lightGrayColor];
+    [alertButton addSubview:lineView];
+    UIButton *payButton = [[UIButton alloc]init];
+    payButton.frame = CGRectMake(0, 35, 250, 50);
+    [alertButton addSubview:payButton];
+ 
+    UIImageView  *payIcon = [[UIImageView alloc]init];
+    payIcon.image = [UIImage imageNamed:@"icon_general_Pay_30x30_"];
+    [payButton addSubview:payIcon];
+    [payIcon makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(15);
+        make.centerY.equalTo(0);
+    }];
+    UILabel *payLabel = [[UILabel alloc]init];
+    payLabel.text = @"支付宝方式";
+    [payButton addSubview:payLabel];
+    [payLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(0);
+        make.left.equalTo(65);
+    }];
+    UILabel *jumpLabel = [[UILabel alloc]init];
+    jumpLabel.font = [UIFont fontWithName:@"iconfont" size:15];
+    jumpLabel.text =@"\U0000E634";
+    jumpLabel.textColor= [UIColor grayColor];
+    [jumpLabel  sizeToFit];
+    [payButton addSubview:jumpLabel];
+    [jumpLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(-20);
+        make.centerY.equalTo(0);
+    }];
+    UIView *paylineView = [[UIView alloc]init];
+    paylineView.frame = CGRectMake(10, 85, 240, 0.5);
+    paylineView.backgroundColor = [UIColor lightGrayColor];
+    [alertButton addSubview:paylineView];
+    
+    UIButton *wechatPayButton = [[UIButton alloc]init];
+    wechatPayButton.frame = CGRectMake(0, 90, 250, 50);
+    [alertButton addSubview:wechatPayButton];
+    UIImageView  *wechatPayImage = [[UIImageView alloc]init];
+    wechatPayImage.image = [UIImage imageNamed:@"icon_general_wechat_30x30_"];
+    [wechatPayButton addSubview:wechatPayImage];
+    [wechatPayImage makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(15);
+        make.centerY.equalTo(0);
+    }];
+    UILabel *wechatPayLabel = [[UILabel alloc]init];
+    wechatPayLabel.text = @"微信方式";
+    [wechatPayButton addSubview:wechatPayLabel];
+    [wechatPayLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(0);
+        make.left.equalTo(65);
+    }];
+    UILabel *wechatjumpLabel = [[UILabel alloc]init];
+    wechatjumpLabel.font = [UIFont fontWithName:@"iconfont" size:15];
+    wechatjumpLabel.text =@"\U0000E634";
+    wechatjumpLabel.textColor= [UIColor grayColor];
+    [wechatjumpLabel  sizeToFit];
+    [wechatPayButton addSubview:wechatjumpLabel];
+    [wechatjumpLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(-20);
+        make.centerY.equalTo(0);
+    }];
+    [payButton addTarget:self action:@selector(aliPay) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+      [wechatPayButton addTarget:self action:@selector(wechatPay) forControlEvents:UIControlEventTouchUpInside];
+   
+}
+-(void)dismaskView:(UIButton *) button {
+    [button removeFromSuperview];
+}
+- (void)aliPay{
+     CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
+    if(self.amountlabel.text != nil){
+        creatQRvc.amt = self.amountlabel.text;
+    }
+     NSLog(@"aliPay");
+     [self.maskButton removeFromSuperview];
+    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
+        [self presentViewController:nv animated:YES completion:nil];
+
+}
+-(void)wechatPay{
+    CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
+    if(self.amountlabel.text != nil){
+        creatQRvc.amt = self.amountlabel.text;
+    }
+     NSLog(@"wechatPay");
+     [self.maskButton removeFromSuperview];
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
     [self presentViewController:nv animated:YES completion:nil];
-    NSLog(@"scanImageButton");
+    
 }
 
+-(void)loginView{
+    loginViewController *loginVc = [[loginViewController alloc]init];
+    [self presentViewController:loginVc animated:YES completion:nil];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = NO;
+}
 @end

@@ -8,6 +8,7 @@
 
 #import "optionViewController.h"
 #import "changePassWordViewController.h"
+#import "loginViewController.h"
 
 @interface optionViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -34,6 +35,20 @@
     [self.view addSubview:tableView];
     tableView.delegate = self;
     tableView.dataSource = self;
+    UIButton *exitButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [exitButton setTitle:@"安全退出" forState:UIControlStateNormal];
+    [exitButton setTintColor:[UIColor blackColor]];
+    exitButton.backgroundColor = [UIColor whiteColor];
+    exitButton.titleLabel.font = [UIFont systemFontOfSize:17];
+    exitButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:exitButton];
+    [exitButton makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(0);
+        make.centerY.equalTo(-115);
+        make.width.equalTo(300);
+        make.height.equalTo(40);
+    }];
+    [exitButton addTarget:self action:@selector(exitToLogin) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -96,5 +111,18 @@
         changePassWordViewController *changePwdVc = [[changePassWordViewController alloc]init];
     [self.navigationController pushViewController:changePwdVc animated:YES];
     }
+}
+
+-(void)exitToLogin{
+
+    loginViewController *loginVc = [[loginViewController alloc]init];
+    [self presentViewController:loginVc animated:YES completion:^{
+        self.tabBarController.selectedIndex = 0;
+    }];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //利用通知告诉对应控制器需要做什么
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"clear" object:nil];
+//    UITabBarController *tableBar = [[UITabBarController alloc]init];
+//    [UIApplication sharedApplication].keyWindow.rootViewController =tableBar;
 }
 @end
