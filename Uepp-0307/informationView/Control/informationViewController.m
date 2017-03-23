@@ -12,14 +12,6 @@
 #import "questionViewController.h"
 #import "UserInformationViewController.h"
 
-//取色
-#define UIColorFromRGB1(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-//define this constant if you want to use Masonry without the 'mas_' prefix
-#define MAS_SHORTHAND
-//define this constant if you want to enable auto-boxing for default syntax
-#define MAS_SHORTHAND_GLOBALS
-#import "Masonry.h"
 @interface informationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (copy,nonatomic)NSString *userName;
 @property UIImageView *imageView;
@@ -65,7 +57,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(indexPath.section == 0)
     {
         //设置无法点击
@@ -125,7 +117,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
      return 0.1;
 }
-
+//cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         return 70;
@@ -141,7 +133,6 @@
     UILabel *label = [[UILabel alloc]init];
     label.text = title;
    
-//    label.frame =CGRectMake(50, 10, 80, 30);
    
     label.font = [UIFont systemFontOfSize:16];
     [label sizeToFit];
@@ -165,6 +156,8 @@
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //设置回弹动画
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 1 ){
         QrCreatViewController *qrVc = [[QrCreatViewController alloc]init];
         [self.navigationController pushViewController:qrVc animated:YES];

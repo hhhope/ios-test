@@ -9,6 +9,7 @@
 #import "billViewController.h"
 #import "selctViewController.h"
 #import "MovieInformation.h"
+#import "billViewTableViewCell.h"
 
 @interface billViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic)NSMutableArray *moveArray;
@@ -19,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //通知的固定格式
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clear) name:@"clear" object:nil];
     //设置tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -43,7 +46,6 @@
     
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     searchBtn.frame = CGRectMake(0, 0, 50, 40);
-//    searchBtn.backgroundColor = [UIColor blackColor];
     searchBtn.titleLabel.font = [UIFont fontWithName:@"iconfont" size:18];
     [searchBtn setTitle:@"\U0000E601" forState:UIControlStateNormal];
     searchBtn.tintColor= [UIColor whiteColor];
@@ -62,7 +64,7 @@
 
 - (void)select{
     selctViewController *selectVc = [[selctViewController alloc]init];
-   
+    
     [self.navigationController pushViewController:selectVc animated:YES];
     
 }
@@ -80,9 +82,33 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    billViewTableViewCell *billCell = [[billViewTableViewCell alloc]init];
+
     MovieInformation *movieDate = _moveArray[indexPath.row];
     NSLog(@"%@",movieDate.title);
-    cell.textLabel.text = movieDate.title;
+    NSString *imageName = nil;
+    NSString *payDesc   = movieDate.title;
+    NSString *payTime   = nil;
+    NSString *payMoney  = nil;
+    NSString *payStat   = nil;
+    UIColor  *payMoneyColor;
+    UIColor  *payStatColor;
+    if (indexPath.row%2 == 0) {
+    imageName=@"icon_general_Pay_30x30_";
+    payTime = @"08:32:00";
+    payMoney= @"￥0.02";
+    payStat= @"支付成功";
+    payMoneyColor = [UIColor blackColor];
+    payStatColor  = [UIColor blackColor];
+    }else{
+    payTime = @"09:32:00";
+    payMoney= @"￥0.01";
+    payStat= @"未支付";
+    imageName=@"icon_general_wechat_30x30_";
+    payMoneyColor = [UIColor grayColor];
+    payStatColor  = [UIColor grayColor];
+    }
+    cell=[billCell billCellWIthstyle:@"cell" imagename:imageName payDesc:payDesc payTime:payTime payMoney:payMoney payMoneyColor: payMoneyColor payStat:payStat payStatColor:payStatColor];
     return cell;
 }
 -(void)refresh{
@@ -101,20 +127,32 @@
         [self.tableView reloadData];
         NSLog(@"%ld",_moveArray.count);
        
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败");
         [self.tableView.mj_header endRefreshing];
     }];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//通知的固定格式
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-*/
-
+-(void)clear{
+    //清空所有数据模型
+    [_moveArray removeAllObjects];
+    [self.tableView reloadData];
+    
+     NSLog(@"clear");
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 55;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"%ld",indexPath.row);
+}
+-(void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = NO;
+}
 @end

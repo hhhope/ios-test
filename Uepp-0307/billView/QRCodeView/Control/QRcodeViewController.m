@@ -290,7 +290,7 @@
         
         self.balance =str1;
         self.amountlabel.text=self.balance;
-        
+        self.balance = nil;
         return ;
     }
     

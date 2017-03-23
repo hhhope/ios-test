@@ -10,6 +10,7 @@
 		2C258DFA1E77CB3100ED70E6 /* billViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258DF51E77CB3100ED70E6 /* billViewController.m */; };
 		2C258DFB1E77CB3100ED70E6 /* selctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258DF71E77CB3100ED70E6 /* selctViewController.m */; };
 		2C258E9E1E77CC1A00ED70E6 /* MovieInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C258E9D1E77CC1A00ED70E6 /* MovieInformation.m */; };
+		2C261CCF1E80B0550048C260 /* billViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C261CCE1E80B0550048C260 /* billViewTableViewCell.m */; };
 		2C473F771E7F6695002D8339 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C473F761E7F6695002D8339 /* loginViewController.m */; };
 		2C88B0FF1E78C9A100CC890F /* CreatQRcodeviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FA1E78C9A100CC890F /* CreatQRcodeviewController.m */; };
 		2C88B1001E78C9A100CC890F /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FC1E78C9A100CC890F /* QRcodeViewController.m */; };
@@ -59,6 +60,8 @@
 		2C258DF71E77CB3100ED70E6 /* selctViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selctViewController.m; sourceTree = "<group>"; };
 		2C258E9C1E77CC1A00ED70E6 /* MovieInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInformation.h; sourceTree = "<group>"; };
 		2C258E9D1E77CC1A00ED70E6 /* MovieInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInformation.m; sourceTree = "<group>"; };
+		2C261CCD1E80B0550048C260 /* billViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billViewTableViewCell.h; sourceTree = "<group>"; };
+		2C261CCE1E80B0550048C260 /* billViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billViewTableViewCell.m; sourceTree = "<group>"; };
 		2C473F751E7F6695002D8339 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		2C473F761E7F6695002D8339 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		2C88B0F91E78C9A100CC890F /* CreatQRcodeviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatQRcodeviewController.h; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 		2C258DF91E77CB3100ED70E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C261CCD1E80B0550048C260 /* billViewTableViewCell.h */,
+				2C261CCE1E80B0550048C260 /* billViewTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				2CADE6211E6EFFFD00E5FA6D /* main.m in Sources */,
 				2C258DFB1E77CB3100ED70E6 /* selctViewController.m in Sources */,
 				2CF210A91E7A7FBD003F8093 /* optionViewController.m in Sources */,
+				2C261CCF1E80B0550048C260 /* billViewTableViewCell.m in Sources */,
 				2C258E9E1E77CC1A00ED70E6 /* MovieInformation.m in Sources */,
 				2CF210AC1E7A804A003F8093 /* questionViewController.m in Sources */,
 				2C88B1191E79280600CC890F /* QrCreatViewController.m in Sources */,

@@ -7,11 +7,10 @@
 //
 
 #import "selctViewController.h"
-//取色
-#define UIColorFromRGB1(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-@interface selctViewController ()
-
+#import "MovieInformation.h"
+@interface selctViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
+@property UISearchBar *searchBar;
+@property MovieInformation *moveDate;
 @end
 
 @implementation selctViewController
@@ -19,35 +18,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.tabBarController.tabBar.hidden = YES;
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backup)];
-    rightBtn.tintColor = UIColorFromRGB(0x1C86EE);
-    self.navigationItem.rightBarButtonItem = rightBtn;
+   self.tabBarController.tabBar.hidden = YES;
+    //设置导航栏只有箭头返回按钮
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
     self.view.backgroundColor = UIColorFromRGB(0xF2F2F2);
-    // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar addSubview:[self searchBarView]];
+    
+}
+-(UIView *)searchBarView{
+    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(40, 0, 300, 44)];
+    self.searchBar.keyboardType = UIKeyboardAppearanceDefault;
+    self.searchBar.placeholder = @"请输入搜索关键字";
+    self.searchBar.delegate = self;
+    //底部的颜色
+    self.searchBar.barTintColor = [UIColor grayColor];
+    self.searchBar.searchBarStyle = UISearchBarStyleDefault;
+    self.searchBar.barStyle = UIBarStyleDefault;
+    return self.searchBar;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.searchBar removeFromSuperview];
 }
 
-
--(void)backup{
-    self.tabBarController.tabBar.hidden = NO;
-           self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x1C86EE);
-    [self.navigationController popViewControllerAnimated:YES];
-}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

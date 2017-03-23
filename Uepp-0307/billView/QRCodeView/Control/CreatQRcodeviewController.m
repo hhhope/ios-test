@@ -98,9 +98,6 @@
     bottomLaber.text = @"微信支付收款,";
     bottomLaber.textAlignment = NSTextAlignmentCenter;
 
-    
-
-
 }
 
 - (void)didReceiveMemoryWarning {
