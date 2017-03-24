@@ -14,7 +14,6 @@
 		2C473F771E7F6695002D8339 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C473F761E7F6695002D8339 /* loginViewController.m */; };
 		2C88B0FF1E78C9A100CC890F /* CreatQRcodeviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FA1E78C9A100CC890F /* CreatQRcodeviewController.m */; };
 		2C88B1001E78C9A100CC890F /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B0FC1E78C9A100CC890F /* QRcodeViewController.m */; };
-		2C88B1051E7910FC00CC890F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C88B1041E7910FC00CC890F /* iconfont.ttf */; };
 		2C88B1131E79267200CC890F /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B1101E79267200CC890F /* informationViewController.m */; };
 		2C88B1151E7926B700CC890F /* ScanImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B1141E7926B700CC890F /* ScanImageViewController.m */; };
 		2C88B1191E79280600CC890F /* QrCreatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88B1181E79280600CC890F /* QrCreatViewController.m */; };
@@ -26,6 +25,7 @@
 		2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */; };
 		2CADE63A1E6EFFFD00E5FA6D /* Uepp_0307Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */; };
 		2CADE6451E6EFFFD00E5FA6D /* Uepp_0307UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */; };
+		2CE3F8451E84E99E00A25E34 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3F8441E84E99E00A25E34 /* iconfont.ttf */; };
 		2CE6A3A11E7B74FC002FD23A /* changePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6A3A01E7B74FC002FD23A /* changePassWordViewController.m */; };
 		2CECAA901E767A0C00D7C105 /* ZBarSDK in Resources */ = {isa = PBXBuildFile; fileRef = 2CECAA8F1E767A0C00D7C105 /* ZBarSDK */; };
 		2CF210A61E7A24D5003F8093 /* creatQRcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF210A51E7A24D5003F8093 /* creatQRcode.m */; };
@@ -68,7 +68,6 @@
 		2C88B0FA1E78C9A100CC890F /* CreatQRcodeviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatQRcodeviewController.m; sourceTree = "<group>"; };
 		2C88B0FB1E78C9A100CC890F /* QRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeViewController.h; sourceTree = "<group>"; };
 		2C88B0FC1E78C9A100CC890F /* QRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeViewController.m; sourceTree = "<group>"; };
-		2C88B1041E7910FC00CC890F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		2C88B10F1E79267200CC890F /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationViewController.h; sourceTree = "<group>"; };
 		2C88B1101E79267200CC890F /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationViewController.m; sourceTree = "<group>"; };
 		2C88B1141E7926B700CC890F /* ScanImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanImageViewController.m; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uepp-0307UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Uepp_0307UITests.m; sourceTree = "<group>"; };
 		2CADE6461E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE3F8441E84E99E00A25E34 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		2CE6A39F1E7B74FC002FD23A /* changePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changePassWordViewController.h; sourceTree = "<group>"; };
 		2CE6A3A01E7B74FC002FD23A /* changePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changePassWordViewController.m; sourceTree = "<group>"; };
 		2CECAA8A1E7675E600D7C105 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 		2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C88B1041E7910FC00CC890F /* iconfont.ttf */,
+				2CE3F8441E84E99E00A25E34 /* iconfont.ttf */,
 				2CECAA8A1E7675E600D7C105 /* PrefixHeader.pch */,
 				2CADE6301E6EFFFD00E5FA6D /* Info.plist */,
 				2CADE6201E6EFFFD00E5FA6D /* main.m */,
@@ -491,7 +491,7 @@
 				2CECAA901E767A0C00D7C105 /* ZBarSDK in Resources */,
 				2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */,
 				2CADE62C1E6EFFFD00E5FA6D /* Assets.xcassets in Resources */,
-				2C88B1051E7910FC00CC890F /* iconfont.ttf in Resources */,
+				2CE3F8451E84E99E00A25E34 /* iconfont.ttf in Resources */,
 				2CADE62A1E6EFFFD00E5FA6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

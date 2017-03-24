@@ -261,7 +261,7 @@
                     case 4:
                     {
                         make.right.equalTo(keyboardView.mas_right);
-//                        [keyView setBackgroundColor:[UIColor colorWithRed:243 green:127 blue:38 alpha:1]];
+
                     }
                         break;
                     default:
@@ -315,14 +315,6 @@
     {
     return ;
     }
-    
-//    if([button.titleLabel.text  isEqual: @"+"]){
-//        
-//        self.input_amt =self.balance;
-//        self.balance = nil;
-//        return ;
-//        
-//    }
     if([button.titleLabel.text  isEqual: @"="]){
         
         if(self.input_amt != nil&&self.ouput_amt==nil){
@@ -424,6 +416,19 @@
         make.top.equalTo(10);
         make.centerX.equalTo(0);
     }];
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    cancelButton.titleLabel.font =[UIFont fontWithName:@"iconfont" size:15];
+    [cancelButton setTitle:@"\U0000E66E" forState:UIControlStateNormal];
+    [cancelButton setTintColor:[UIColor blackColor]];
+    [alertButton addSubview:cancelButton];
+    [cancelButton makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(10);
+        make.top.equalTo(8);
+        make.width.equalTo(20);
+        make.height.equalTo(20);
+        
+    }];
+    [cancelButton addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     UIView *lineView = [[UIView alloc]init];
     lineView.frame = CGRectMake(0, 35, 250, 0.5);
     lineView.backgroundColor = [UIColor lightGrayColor];
@@ -523,6 +528,9 @@
 -(void)loginView{
     loginViewController *loginVc = [[loginViewController alloc]init];
     [self presentViewController:loginVc animated:YES completion:nil];
+}
+-(void)cancel{
+    [self.maskButton removeFromSuperview];
 }
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;

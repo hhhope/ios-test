@@ -2,7 +2,7 @@
 //  billViewController.m
 //  Uepp-0307
 //
-//  Created by 严素 on 2017/3/8.
+//  Created by 严 on 2017/3/8.
 //  Copyright © 2017年 yan. All rights reserved.
 //
 
@@ -64,7 +64,7 @@
 
 - (void)select{
     selctViewController *selectVc = [[selctViewController alloc]init];
-    
+    selectVc.dataArray = self.moveArray;
     [self.navigationController pushViewController:selectVc animated:YES];
     
 }

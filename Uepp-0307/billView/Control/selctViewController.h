@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface selctViewController : UIViewController
-
+@property(nonatomic,strong)NSArray *dataArray;
 @end
