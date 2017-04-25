@@ -13,7 +13,9 @@
 #import "ScanImageViewController.h"
 #import "CreatQRcodeviewController.h"
 #import "loginViewController.h"
-@interface QRcodeViewController ()
+static  NSString* const weChatcode = @"80014";
+static  NSString* const aliPay     = @"80008";
+@interface QRcodeViewController ()<ScanImageView,CreatQRcodeviewDelegate>
 
 //显示屏
 @property UIImageView *amount;
@@ -25,6 +27,7 @@
 @property NSString *balance;
 @property NSString *ouput_amt;//金额
 @property NSString *input_amt;
+@property NSString *merid;
 //扫描和收款
 
 @property UIButton *qrCodeButton;
@@ -35,6 +38,8 @@
 
 //蒙板
 @property UIButton *maskButton;
+
+@property UINavigationController *nv;
 @end
 
 @implementation QRcodeViewController
@@ -134,9 +139,10 @@
     [self.amountlabel sizeToFit];
     [self.amountlabel makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.amountTitle.bottom).offset(10);
-        make.left.equalTo(self.amount).offset(20);
+        make.right.equalTo(self.amount).offset(-20);
     }];
     self.qrButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.qrButton addTarget:self action:@selector(qr_Pay) forControlEvents:UIControlEventTouchUpInside];
     [self.amount addSubview:self.qrButton];
     self.qrButton.titleLabel.font = [UIFont fontWithName:@"iconfont" size:25];
     [self.qrButton setTitle:@"\U0000E642" forState:UIControlStateNormal];
@@ -171,6 +177,9 @@
     [self calculator];
     
 }
+
+
+
 -(void)calculator{
     //申明区域，displayView是显示区域，keyboardView是键盘区域
     UIView *keyboardView = [UIView new];
@@ -272,6 +281,7 @@
     }
 }
 
+
 - (void)click :(UIButton *)button{
 
     NSLog(@"%@",button.titleLabel.text);
@@ -346,7 +356,7 @@
 }
 - (void)qr_Pay{
     ScanImageViewController *scanImage =[[ScanImageViewController alloc]init];
-  
+    scanImage.delegate = self;
     if([self.amountlabel.text  isEqual: @"0.00"])
     {
         //STEP 1
@@ -368,10 +378,12 @@
     }else if(self.amountlabel.text != nil){
         scanImage.amt = self.amountlabel.text;
     }
-    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:scanImage];
+    self.nv = [[UINavigationController alloc]initWithRootViewController:scanImage];
     //模态跳转
-    [self presentViewController:nv animated:YES completion:nil];
+    
+    [self presentViewController:self.nv animated:YES completion:nil];
     NSLog(@"scanImageButton");
+ 
 }
 -(void)qrCollection{
    
@@ -503,26 +515,15 @@
     [button removeFromSuperview];
 }
 - (void)aliPay{
-     CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
-    if(self.amountlabel.text != nil){
-        creatQRvc.amt = self.amountlabel.text;
-    }
+
      NSLog(@"aliPay");
-     [self.maskButton removeFromSuperview];
-    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
-        [self presentViewController:nv animated:YES completion:nil];
+    [self callQRcreat:aliPay];
 
 }
 -(void)wechatPay{
-    CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
-    if(self.amountlabel.text != nil){
-        creatQRvc.amt = self.amountlabel.text;
-    }
      NSLog(@"wechatPay");
-     [self.maskButton removeFromSuperview];
-    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
-    [self presentViewController:nv animated:YES completion:nil];
-    
+
+    [self callQRcreat:weChatcode];
 }
 
 -(void)loginView{
@@ -535,4 +536,123 @@
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
 }
+- (void)removeScanImageView{
+    [self.nv dismissViewControllerAnimated:NO completion:^{
+        
+        CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
+        creatQRvc.delegate = self;
+        creatQRvc.amt = self.amountlabel.text;
+        self.nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
+        [self presentViewController:self.nv animated:YES completion:nil];
+    }];
+ 
+}
+- (void)removeQRcodeview{
+    
+    [self.nv dismissViewControllerAnimated:NO completion:^{
+       
+        ScanImageViewController *ScanImagevc = [[ScanImageViewController alloc]init];
+        ScanImagevc.delegate = self;
+        ScanImagevc.amt = self.amountlabel.text;
+        self.nv = [[UINavigationController alloc]initWithRootViewController:ScanImagevc];
+        [self presentViewController:self.nv animated:YES completion:nil];
+    }];
+    
+}
+#pragma mark - 通讯
+-(void)callQRcreat:(NSString *)tx_code {
+    NSString *webServiceUrl = @"http://www.dldhcwx.com/icmp-ums/dhc/sys/mobile.do";
+    //    //参数值
+    //    NSString *theCityCode = @"nanjing";
+    //请求体拼接
+    NSUserDefaults *mer = [NSUserDefaults standardUserDefaults];
+    NSString *mer_id = [ mer objectForKey:@"mer_id"];
+    DLOGP(@"%@",mer_id);
+    // 启动系统风火轮
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSString *soapMessage = [NSString stringWithFormat: @"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>"
+                             "<Request>"
+                             "<Head>"
+                             "<trace_no>6</trace_no>"
+                             "<terminalno>8</terminalno>"
+                             "<tanstype>%@</tanstype>"
+                             "<acceptidcode>%@</acceptidcode>"
+                             "<operateno>3</operateno>"
+                             "</Head>"
+                             "<Body>"
+                             "<amt>%@</amt>"
+                             "</Body>"
+                             "</Request>"
+                             ,tx_code,mer_id,self.amountlabel.text];
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", @"application/xml", nil];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
+    //请求体设置
+    
+    [manager.requestSerializer setQueryStringSerializationWithBlock:^NSString * _Nonnull(NSURLRequest * _Nonnull request, id  _Nonnull parameters, NSError * _Nullable __autoreleasing * _Nullable error) {
+        return [soapMessage copy];
+    }];
+    //设置返回XMLParser数据解析类型
+    [SVProgressHUD showWithStatus:nil];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [manager POST:webServiceUrl parameters:@"aaa" progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"success");
+        // 隐藏系统风火轮
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        XMLDictionaryParser *parser=[[XMLDictionaryParser alloc]init];
+        NSDictionary *dic=[parser dictionaryWithData:responseObject];
+        DLOGP(@"%@",dic);
+        NSDictionary *dic2 = [dic objectForKey:@"Body"];
+        DLOGP(@"%@",dic2);
+        NSString *respcd = [dic2 objectForKey:@"respcd"];
+        DLOGP(@"respcd=%@",respcd);
+        NSString *RET_MSG = [dic2 objectForKey:@"RET_MSG"];
+        NSString *code_url = [dic2 objectForKey:@"code_url"];
+         [SVProgressHUD dismiss];
+        NSString *qr_code = [dic2 objectForKey:@"qr_code"];
+        if([respcd  isEqual: @"00"]){
+            NSLog(@"%@",RET_MSG);
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                // time-consuming task
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   
+                });
+            });
+            CreatQRcodeviewController *creatQRvc = [[CreatQRcodeviewController alloc]init];
+            if(self.amountlabel.text != nil){
+                creatQRvc.amt = self.amountlabel.text;
+            }
+            if(tx_code == aliPay)
+            {
+                creatQRvc.payFlag = 1;
+                creatQRvc.qrCode = qr_code;
+            }else{
+                creatQRvc.payFlag = 2;
+                creatQRvc.qrCode =code_url;
+            }
+            
+            [self.maskButton removeFromSuperview];
+            
+            self.nv = [[UINavigationController alloc]initWithRootViewController:creatQRvc];
+            [self presentViewController: self.nv animated:YES completion:nil];
+        }
+        DLOGP(@"RET_MSG=%@",RET_MSG);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            // time-consuming task
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+            });
+        });
+    }];
+}
+
 @end

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @protocol ScanImageView<NSObject>
-
+@optional
 - (void)reportScanResult:(NSString *)result;
-
+- (void)removeScanImageView;
 @end
 
 @interface ScanImageViewController : UIViewController

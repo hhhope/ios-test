@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol CreatQRcodeviewDelegate<NSObject>
+@optional
+- (void)removeQRcodeview;
+@end
 @interface CreatQRcodeviewController : UIViewController
-@property (nonatomic,copy)NSString *qrCode;
-@property (nonatomic,copy) NSString *amt;
+@property (nonatomic,copy)   NSString *qrCode;
+@property (nonatomic,copy)   NSString *amt;
+@property (nonatomic,assign) NSUInteger payFlag;
+@property (nonatomic,weak)id <CreatQRcodeviewDelegate>delegate;//代理方法传递数据
 @end

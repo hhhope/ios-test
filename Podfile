@@ -1,5 +1,6 @@
  
 target 'Uepp-0307'
+pod 'SVProgressHUD'
 pod 'Masonry'
 pod 'MJRefresh'
 pod 'AFNetworking', '~> 3.1.0'

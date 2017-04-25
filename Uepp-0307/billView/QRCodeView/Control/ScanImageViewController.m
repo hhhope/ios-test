@@ -9,7 +9,7 @@
 #import "ScanImageViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
-
+#import "CreatQRcodeviewController.h"
 #define SCANVIEW_EdgeTop 70.0
 #define SCANVIEW_EdgeLeft 50.0
 #define TINTCOLOR_ALPHA 0.2 //浅色透明度
@@ -43,7 +43,6 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
     [self stopTimer];
     
 }
@@ -51,6 +50,11 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
 - (void)viewDidLoad {
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 50)];
+    
+    NSUserDefaults *mer = [NSUserDefaults standardUserDefaults];
+    NSString *mer_id = [ mer objectForKey:@"mer_id"];
+    DLOGP(@"%@",mer_id);
+    
     
     titleLabel.font = [UIFont boldSystemFontOfSize:20];
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -251,6 +255,38 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
     labIntroudction.text=@"将二维码或条码对准方框，即可自动扫描";
     [downView addSubview:labIntroudction];
     
+    
+    
+    UIButton *createQRcodeView =[UIButton buttonWithType:UIButtonTypeSystem];
+    [createQRcodeView setTitle:@"切换收款二维码" forState:UIControlStateNormal];
+    [downView addSubview:createQRcodeView];
+    [createQRcodeView addTarget:self action:@selector(creatQRcodeImage) forControlEvents:UIControlEventTouchUpInside];
+    [createQRcodeView makeConstraints:^(MASConstraintMaker *make) {
+       make.top.equalTo(50);
+       make.left.equalTo(((VIEW_WIDTH+70)/5.5));
+       make.height.equalTo(20);
+   }];
+    UILabel *lineLable = [[UILabel alloc]init];
+    lineLable.text = @"|";
+    lineLable.textColor = [UIColor blueColor];
+    [downView addSubview:lineLable];
+    [lineLable makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(50);
+        make.left.equalTo(((VIEW_WIDTH+70)/5.5)+108);
+        make.height.equalTo(20);
+    }];
+    UIButton *inputQRcodebutton =[UIButton buttonWithType:UIButtonTypeSystem];
+    [inputQRcodebutton setTitle:@"输入付款码" forState:UIControlStateNormal];
+    [downView addSubview:inputQRcodebutton];
+    [inputQRcodebutton makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(50);
+        make.left.equalTo(((VIEW_WIDTH+70)/5.5)+115);
+        make.height.equalTo(20);
+    }];
+
+    
+    
+    
 //    //取消button
 //    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    cancelButton.backgroundColor =[[UIColor blackColor] colorWithAlphaComponent:DARKCOLOR_ALPHA];
@@ -360,5 +396,14 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - 切换收款二维码
+-(void)creatQRcodeImage{
 
+ 
+    if ([self.delegate respondsToSelector:@selector(removeScanImageView)]) {
+        [self.delegate removeScanImageView];
+    }
+ 
+    
+}
 @end

@@ -25,6 +25,10 @@
 		2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CADE62D1E6EFFFD00E5FA6D /* LaunchScreen.storyboard */; };
 		2CADE63A1E6EFFFD00E5FA6D /* Uepp_0307Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6391E6EFFFD00E5FA6D /* Uepp_0307Tests.m */; };
 		2CADE6451E6EFFFD00E5FA6D /* Uepp_0307UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */; };
+		2CD944801EAA38FA0054DBD8 /* CallServerFuntion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9447F1EAA38FA0054DBD8 /* CallServerFuntion.m */; };
+		2CDD1E9B1E960AEA0065FAB7 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD1E9A1E960AEA0065FAB7 /* XMLDictionary.m */; };
+		2CDD1E9C1E960B0A0065FAB7 /* XMLDictionary.h in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD1E991E960AEA0065FAB7 /* XMLDictionary.h */; };
+		2CDD1E9D1E960B0A0065FAB7 /* XMLDictionary.m in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD1E9A1E960AEA0065FAB7 /* XMLDictionary.m */; };
 		2CE3F8451E84E99E00A25E34 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3F8441E84E99E00A25E34 /* iconfont.ttf */; };
 		2CE6A3A11E7B74FC002FD23A /* changePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6A3A01E7B74FC002FD23A /* changePassWordViewController.m */; };
 		2CECAA901E767A0C00D7C105 /* ZBarSDK in Resources */ = {isa = PBXBuildFile; fileRef = 2CECAA8F1E767A0C00D7C105 /* ZBarSDK */; };
@@ -89,7 +93,11 @@
 		2CADE63B1E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CADE6401E6EFFFD00E5FA6D /* Uepp-0307UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uepp-0307UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Uepp_0307UITests.m; sourceTree = "<group>"; };
-		2CADE6461E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CADE6461E6EFFFD00E5FA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Uepp-0307UITests/Info.plist"; sourceTree = SOURCE_ROOT; };
+		2CD9447E1EAA38FA0054DBD8 /* CallServerFuntion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallServerFuntion.h; sourceTree = "<group>"; };
+		2CD9447F1EAA38FA0054DBD8 /* CallServerFuntion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallServerFuntion.m; sourceTree = "<group>"; };
+		2CDD1E991E960AEA0065FAB7 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		2CDD1E9A1E960AEA0065FAB7 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		2CE3F8441E84E99E00A25E34 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		2CE6A39F1E7B74FC002FD23A /* changePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changePassWordViewController.h; sourceTree = "<group>"; };
 		2CE6A3A01E7B74FC002FD23A /* changePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changePassWordViewController.m; sourceTree = "<group>"; };
@@ -300,7 +308,6 @@
 			children = (
 				2CADE61E1E6EFFFD00E5FA6D /* Uepp-0307 */,
 				2CADE6381E6EFFFD00E5FA6D /* Uepp-0307Tests */,
-				2CADE6431E6EFFFD00E5FA6D /* Uepp-0307UITests */,
 				2CADE61D1E6EFFFD00E5FA6D /* Products */,
 				21AF633A42FFEA80A1EFBA91 /* Pods */,
 				CE9E7BF9E5E0B5F36985D2E0 /* Frameworks */,
@@ -326,8 +333,12 @@
 				2C88B10D1E79267200CC890F /* informationView */,
 				2C473F711E7F6674002D8339 /* loginView */,
 				2CADE6221E6EFFFD00E5FA6D /* AppDelegate.h */,
+				2CD9447E1EAA38FA0054DBD8 /* CallServerFuntion.h */,
+				2CD9447F1EAA38FA0054DBD8 /* CallServerFuntion.m */,
 				2CADE6231E6EFFFD00E5FA6D /* AppDelegate.m */,
 				2CADE6251E6EFFFD00E5FA6D /* ViewController.h */,
+				2CDD1E991E960AEA0065FAB7 /* XMLDictionary.h */,
+				2CDD1E9A1E960AEA0065FAB7 /* XMLDictionary.m */,
 				2CADE6261E6EFFFD00E5FA6D /* ViewController.m */,
 				2CF210A41E7A24D5003F8093 /* creatQRcode.h */,
 				2CF210A51E7A24D5003F8093 /* creatQRcode.m */,
@@ -342,10 +353,12 @@
 		2CADE61F1E6EFFFD00E5FA6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CADE6461E6EFFFD00E5FA6D /* Info.plist */,
 				2CE3F8441E84E99E00A25E34 /* iconfont.ttf */,
 				2CECAA8A1E7675E600D7C105 /* PrefixHeader.pch */,
 				2CADE6301E6EFFFD00E5FA6D /* Info.plist */,
 				2CADE6201E6EFFFD00E5FA6D /* main.m */,
+				2CADE6431E6EFFFD00E5FA6D /* Uepp-0307UITests */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,10 +376,9 @@
 			isa = PBXGroup;
 			children = (
 				2CADE6441E6EFFFD00E5FA6D /* Uepp_0307UITests.m */,
-				2CADE6461E6EFFFD00E5FA6D /* Info.plist */,
 			);
 			path = "Uepp-0307UITests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE9E7BF9E5E0B5F36985D2E0 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -488,6 +500,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDD1E9C1E960B0A0065FAB7 /* XMLDictionary.h in Resources */,
+				2CDD1E9D1E960B0A0065FAB7 /* XMLDictionary.m in Resources */,
 				2CECAA901E767A0C00D7C105 /* ZBarSDK in Resources */,
 				2CADE62F1E6EFFFD00E5FA6D /* LaunchScreen.storyboard in Resources */,
 				2CADE62C1E6EFFFD00E5FA6D /* Assets.xcassets in Resources */,
@@ -569,7 +583,9 @@
 				2CE6A3A11E7B74FC002FD23A /* changePassWordViewController.m in Sources */,
 				2CF210A61E7A24D5003F8093 /* creatQRcode.m in Sources */,
 				2CADE6271E6EFFFD00E5FA6D /* ViewController.m in Sources */,
+				2CD944801EAA38FA0054DBD8 /* CallServerFuntion.m in Sources */,
 				2C88B1001E78C9A100CC890F /* QRcodeViewController.m in Sources */,
+				2CDD1E9B1E960AEA0065FAB7 /* XMLDictionary.m in Sources */,
 				2C473F771E7F6695002D8339 /* loginViewController.m in Sources */,
 				2C88B1131E79267200CC890F /* informationViewController.m in Sources */,
 				2CADE6241E6EFFFD00E5FA6D /* AppDelegate.m in Sources */,
@@ -735,6 +751,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/yan/Documents/Uepp-0307/backup/Uepp-0307/PrefixHeader.pch";
 				INFOPLIST_FILE = "Uepp-0307/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -755,6 +772,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/yan/Documents/Uepp-0307/backup/Uepp-0307/PrefixHeader.pch";
 				INFOPLIST_FILE = "Uepp-0307/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
